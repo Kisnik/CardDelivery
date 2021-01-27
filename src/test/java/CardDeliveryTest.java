@@ -29,7 +29,7 @@ public class CardDeliveryTest {
     }
 
     @Test
-    void shouldSuccess () {
+    void shouldSuccess() {
         $("[data-test-id=city] .input__control").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").doubleClick().sendKeys(Keys.DELETE);
         $("[placeholder=\"Дата встречи\"]").setValue(returnDate(3));
@@ -48,7 +48,7 @@ public class CardDeliveryTest {
         $("[data-test-id=city] .input__control").setValue("Са");
         $(byText("Самара")).click();
         $("[placeholder=\"Дата встречи\"]").click();
-        for(int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
             $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.DOWN, Keys.RIGHT);
         }
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.DOWN, Keys.ENTER);
